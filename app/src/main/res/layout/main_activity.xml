@@ -1,10 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/llRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-</LinearLayout>
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/main_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin_normal"
+        android:layout_marginEnd="@dimen/main_margin_normal"
+        android:text="@string/main_switch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/main_userName_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_normal"
+        android:text="@string/main_userName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_switch"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/main_userNameInput"
+        android:layout_width="@dimen/main_match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_normal"
+        android:layout_marginEnd="@dimen/main_margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_userName_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/main_userLastName_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin_normal"
+        android:text="@string/main_userLastName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_userNameInput"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/main_userLastNameInput"
+        android:layout_width="@dimen/main_match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_low"
+        android:layout_marginEnd="@dimen/main_margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_userLastName_label"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/main_genderPicker_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_normal"
+        android:text="@string/main_optionPicker"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_userLastNameInput"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/main_polite_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_normal"
+        android:text="@string/main_checkBox"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_icon_gender"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/main_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_margin_low"
+        android:text="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_polite_checkbox"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/main_greet_progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/main_match_constraint"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_normal"
+        android:layout_marginEnd="@dimen/main_margin_normal"
+        android:max="10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_button"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/main_button_counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/main_margin_normal"
+        android:text="@string/main_button_counter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_greet_progressBar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/main_icon_gender"
+        android:layout_width="@dimen/main_icon"
+        android:layout_height="@dimen/main_icon"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_low"
+        android:layout_weight="1"
+        android:contentDescription="@string/gender_icon_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_genderPicker_label"
+        app:layout_constraintVertical_bias="0.0"
+        tools:srcCompat="@drawable/man" />
+
+    <RadioGroup
+        android:id="@+id/main_genderPicker_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_low"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/main_icon_gender"
+        app:layout_constraintTop_toBottomOf="@+id/main_genderPicker_label">
+
+        <RadioButton
+            android:id="@+id/main_genderButton_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_gender_1" />
+
+        <RadioButton
+            android:id="@+id/main_genderButton_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_gender_2" />
+
+        <RadioButton
+            android:id="@+id/main_genderButton_3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/main_gender_3" />
+
+    </RadioGroup>
+
+    <TextView
+        android:text=""
+        android:id="@+id/main_text_result"
+        android:layout_width="@dimen/main_match_constraint"
+        android:layout_height="@dimen/main_match_constraint"
+        android:layout_marginStart="@dimen/main_margin_normal"
+        android:layout_marginTop="@dimen/main_margin_normal"
+        android:layout_marginEnd="@dimen/main_margin_normal"
+        android:layout_marginBottom="@dimen/main_margin_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_button_counter"
+        app:layout_constraintVertical_bias="0.0"
+        style="@style/TextAppearance.AppCompat.Headline"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

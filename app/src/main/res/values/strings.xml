@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Greet</string>
+    <string name="main_userName">Name</string>
+    <string name="main_userLastName">Sirname</string>
+    <string name="main_optionPicker">Treatment</string>
+    <string name="main_checkBox">Politely</string>
+    <string name="main_switch">Premium</string>
+    <string name="main_gender_1">Mr.</string>
+    <string name="main_gender_2">Mrs.</string>
+    <string name="main_gender_3">Ms.</string>
+    <string name="main_button_counter">%1$d of %2$d</string>
+    <string name="gender_icon_description">Gender icon</string>
+    <string name="main_trialEnd">Buy premium subscription to go on greeting!!</string>
 </resources>

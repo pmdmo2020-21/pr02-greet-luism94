@@ -1,3 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="main_margin_big">32dp</dimen>
+    <dimen name="main_margin_normal">16dp</dimen>
+    <dimen name="main_margin_low">8dp</dimen>
+    <dimen name="main_match_constraint">0dp</dimen>
+    <dimen name="main_icon">30dp</dimen>
+    <dimen name="main_maxProgress">10</dimen>
 </resources>
